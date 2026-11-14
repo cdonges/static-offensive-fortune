@@ -8,9 +8,15 @@
   </head>
   <body>
     <main class="fortune-shell">
-      <p class="label">offensive fortune</p>
       <div id="fortune" class="fortune" aria-live="polite"></div>
-      <button id="new-fortune" type="button">Another one</button>
+      <div class="actions" aria-label="Fortune actions">
+        <button id="new-fortune" type="button">Another one</button>
+        <button id="copy-fortune" type="button" class="secondary" aria-label="Copy fortune" title="Copy fortune">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/>
+          </svg>
+        </button>
+      </div>
     </main>
 
     <script src="./app.js" defer></script>

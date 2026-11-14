@@ -16,6 +16,7 @@ html, body {
 }
 
 body {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +32,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: 2rem;
+  padding: 2rem 2rem 5.5rem;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: var(--panel);
 }
@@ -51,6 +52,21 @@ body {
   text-align: center;
 }
 
+.actions {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(16, 16, 16, 0.85);
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+}
+
 button {
   appearance: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -58,8 +74,25 @@ button {
   color: var(--fg);
   font: inherit;
   padding: 0.8rem 1.4rem;
+  min-height: 3rem;
   cursor: pointer;
   transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+button.secondary {
+  border-color: rgba(255, 255, 255, 0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  min-height: 3rem;
+  padding: 0;
+}
+
+button.secondary svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: currentColor;
 }
 
 button:hover {
